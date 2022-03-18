@@ -1,0 +1,19 @@
+def solve(x):
+     new = []
+     for x in x:
+          #print(x)
+          if len(new) == 0:
+               new.append(x)
+               #print(new)
+          elif x not in new:
+               new.append(x)
+     if len(new) == 2:
+          sol = sol + 1
+     else:
+          solve(new)
+               
+     #print(new)
+N = int(input())
+array = input().split()
+# print(array)
+solve(array)
