@@ -1,0 +1,26 @@
+# matrix size and value of k
+def compare(sum,i):
+    #to add new formula to check all possible sq in the matrix
+    for l in range(i):
+        for j in range(i):
+            sum += int(matrix[l][j])
+    
+    if sum >= k:
+        print('YES')
+        print('1 1',i,i)
+    elif i < n-1:
+        i = i + 1
+        compare(sum,i)
+    else:
+        print('NO')
+
+
+n,k = map(int, input().split())
+matrix = []
+for i in range(n):
+    a = [x for x in input().split()]
+    matrix.append(a)
+sum,i = 0,1 
+compare(sum,i)
+    # star from 1,1 and add all element to a complete square
+    #check if sum is greater than k
