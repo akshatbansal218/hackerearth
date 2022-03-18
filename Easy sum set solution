@@ -1,0 +1,16 @@
+n = int(input())
+a = list(map(int, input().split()))
+m = int(input())
+c = list(map(int, input().split()))
+b = []
+maximum_a = max(a)
+maximum_c = max(c)
+for i in range(abs(maximum_a-maximum_c)+1):
+    count = 0
+    for j in a:
+        if i+j in c:
+            count += 1
+        if count == n:
+            b.append(i)
+b.sort()
+print(" ".join(map(str, b)))
