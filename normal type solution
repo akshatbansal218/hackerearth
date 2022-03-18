@@ -1,4 +1,5 @@
 def solve(x):
+
      new = []
      for x in x:
           #print(x)
