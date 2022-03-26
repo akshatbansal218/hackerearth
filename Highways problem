@@ -1,0 +1,38 @@
+def far(x,y,fr):
+        if (x+y) > fr:
+          fr = x+y
+          z.append(x)
+          z.append(y)
+          return(fr)
+        
+
+#j = input()
+N,k = map(int,input().split())
+fr = 0
+x,y,z = [],[],[]
+
+for _ in range(k):
+    a,b = map(int,input().split())
+      # print(a,b)
+      # print(k)
+    if (N**2 >= a+b) and a+b >= 0 :
+      x.append(a)
+      y.append(b)
+      fr = far(a,b,fr)
+#print(fr)
+
+
+x.sort()
+y.sort()
+
+mid_x = int(round(x[-1]+x[0] // 2))
+mid_y = int(round(y[0] + y[-1] //2))
+
+#print(z)
+
+m = z[-2] - mid_x
+n = z[-1] - mid_y
+if m > n:
+  print(m)
+else:
+  print(n)
